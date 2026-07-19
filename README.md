@@ -1,6 +1,6 @@
 # Madestays Vault — Owner Onboarding Dashboard
 
-This is my implementation of the Client Portal dashboard and designed a figma for it in my own style: a property
+This is my implementation of the Client Portal dashboard and designed a figma for it in my own style, a property
 owner's onboarding tracker showing every property, its live/in-progress/action-required
 status, and a step-by-step onboarding checklist per property.
 
@@ -41,7 +41,7 @@ Required" tabs and stat cards in Figma: if any step is `action_required` that wi
 since it's blocking the owner; if all ten steps are `complete` the property is `live`;
 everything else falls under `in_progress`, including a property with no steps recorded
 at all. That also means a step marked `not_started` gets folded into the "In Progress"
-bucket at the property-summary level, since Figma only has three top-level categories —
+bucket at the property-summary level, since Figma only has three top-level categories,
 the full step-level detail, `not_started` included, still shows in the property
 checklist itself.
 
@@ -53,7 +53,7 @@ I wired up the two chart widgets on the stat cards I put in the Figma file, so t
 bar chart mirrors the live/in-progress/action-required counts, and the monthly progress
 bars show average onboarding completion for properties targeting go-live in each month.
 
-Two properties in the dataset have no usable image — one has an empty `image` string,
+Two properties in the dataset have no usable image, one has an empty `image` string,
 and one points at a URL that 404s. I treated both as the same "no image available"
 case with a fallback tile, rather than letting either show a broken image.
 
@@ -64,7 +64,7 @@ I also designed the property detail view in the figma file, to show step notes a
 If I had more time, the main thing I'd go back and fix is the loading experience: right
 now the skeleton covers the whole dashboard as one block, so the stat cards and the
 property list all appear together once the data resolves. I'd rather split those apart
-so the properties list and the stats overview load independently — the stats can render
+so the properties list and the stats overview load independently, the stats can render
 as soon as they're ready, and the list can keep its own skeleton and pop in on its own
 timeline. That way the app still feels fast and responsive even if the property list
 itself ends up being the slower piece to load.
@@ -72,12 +72,12 @@ itself ends up being the slower piece to load.
 Beyond that, I'd want proper tests around the status-derivation and filtering logic,
 a deeper accessibility pass on the custom dropdowns and the modal's focus handling, and
 to turn the checklist from something read-only into something an owner can actually act
-on — uploading the missing certificate for a blocked step, for example, instead of just
+on, uploading the missing certificate for a blocked step, for example, instead of just
 seeing the note.
 
 ## Where I used AI tools
 
-I used AI (Claude Code) while writing the code for this — I gave it the design I'd
+I used AI (Claude Code) while writing the code for this, I gave it the design I'd
 already worked out and the Figma links, and prompted it to help me build faster,
 reading the Figma file directly and generating the component structure and
 implementation from there. I reviewed what it produced as I went and tweaked or
