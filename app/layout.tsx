@@ -19,7 +19,7 @@ const sunghyunSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Madestays Vault",
+  title: "Madestays | Client Portal",
   description: "Track every property's onboarding journey, from first listing to going live.",
 };
 

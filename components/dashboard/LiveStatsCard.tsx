@@ -25,7 +25,7 @@ export function LiveStatsCard({
         {stats.map((stat, i) => (
           <div key={stat.label} className="flex items-center gap-8">
             {i > 0 && <div className="hidden h-10 w-px bg-black/10 sm:block" aria-hidden />}
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-2">
               <p className="text-sm whitespace-nowrap text-black/60">{stat.label}</p>
               <div className="flex items-end gap-2">
                 <p className="text-[32px] leading-none font-medium text-black sm:text-[36px]">

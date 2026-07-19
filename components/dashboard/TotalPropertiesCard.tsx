@@ -26,8 +26,8 @@ export function TotalPropertiesCard({
   const maxValue = Math.max(live, inProgress, actionRequired, 1);
 
   return (
-    <div className="flex h-[252px] w-full flex-1 items-center justify-between gap-8 overflow-hidden rounded-[25px] bg-white py-[30px] pr-5 pl-[30px]">
-      <div className="flex min-w-0 flex-col items-start gap-0.5">
+    <div className="flex h-[252px] w-full flex-1 items-start justify-between gap-8 overflow-hidden rounded-[25px] bg-white pt-[30px] pb-0 pr-5 pl-[30px]">
+      <div className="flex min-w-0 flex-col items-start gap-2">
         <p className="text-sm text-black/60">Total properties</p>
         <div className="flex items-end gap-2">
           <p className="text-[56px] leading-none font-medium text-black sm:text-[64px]">
@@ -39,7 +39,7 @@ export function TotalPropertiesCard({
         </div>
       </div>
       <div
-        className="flex h-[157px] shrink-0 items-end gap-[6px]"
+        className="flex h-[157px] shrink-0 items-end justify-end gap-[6px] self-end"
         role="img"
         aria-label={`Property status distribution: ${live} live, ${inProgress} in progress, ${actionRequired} action required`}
       >
@@ -51,7 +51,7 @@ export function TotalPropertiesCard({
               key={bar.label}
               title={`${bar.label}: ${bar.value}`}
               className={cn(
-                "w-[54px] rounded-2xl border border-solid transition-[height] duration-300 sm:w-[70px]",
+                "w-[54px] rounded-t-2xl border border-solid transition-[height] duration-300 sm:w-[70px]",
                 isLive ? "border-white/20 bg-neutral-800" : "border-black/10 bg-neutral-200/80"
               )}
               style={{ height: `${heightPercent}%` }}

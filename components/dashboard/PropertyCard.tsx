@@ -25,10 +25,11 @@ export function PropertyCard({ entry, totalSteps, onSelect }: PropertyCardProps)
       <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-105">
         <PropertyImage src={property.image} alt={property.name} />
       </div>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/35 to-transparent" />
 
-      {/* Blends the photo into the text below it, sharp at the top and
-          smoothly increasing to fully blurred at the bottom — not a flat
-          blur panel with a hard edge. */}
+      {/* Blends the photo into the text below it: untouched and sharp
+          above this panel, smoothly increasing to fully blurred at the
+          card's bottom edge — not a flat blur with a hard seam. */}
       <ProgressiveBlur />
 
       <div className="absolute top-4 left-4">
