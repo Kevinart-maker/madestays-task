@@ -22,7 +22,7 @@ For a production build, `npm run build` compiles and type-checks the app, and `n
 start` serves it. `npm run lint` runs ESLint on its own if you just want that.
 
 There's no real backend behind this — `lib/data.ts` returns the JSON dataset from
-`lib/mock-data.ts` behind an artificial ~300ms delay, which is what the skeleton loader
+`lib/mock-data.ts` behind an artificial ~2300ms delay, which is what the skeleton loader
 on first load is covering for. The page is rendered dynamically rather than statically
 built, specifically so that delay (and the skeleton) happens on every request instead
 of only once at build time.
